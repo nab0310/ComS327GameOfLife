@@ -184,7 +184,7 @@ int main(int argc, char **argv){
       life(array);
       usleep(83333);
       numberOfCycles++;
-      fprintf("Time: %d\n", numberOfCycles);
+      printf("Time: %d\n", numberOfCycles);
   }
 
   return 0;
