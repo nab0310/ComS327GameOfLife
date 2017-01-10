@@ -103,13 +103,13 @@ void life(int array[WIDTH][LENGTH]){
                 j = tmpJ;
             }
             /*Game of life logic*/
-            if(count < 2){
+            if(tmp[h][j] == 1 && count < 2){
                 tmp[h][j] = 0;
             }
-            if(count == 2 || count == 3){
+            if(tmp[h][j] == 1 && count == 2 || count == 3){
                 tmp[h][j] = array[h][j];
             }
-            if(count == 4){
+            if(tmp[h][j] == 1 && count == 4){
                 tmp[h][j] = 0;
             }
             if(tmp[h][j]== 0 && count == 3){
