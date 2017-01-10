@@ -160,7 +160,7 @@ void life(int array[WIDTH][LENGTH]){
 
 void populateArray(int array[WIDTH][LENGTH],int argc, char **argv){
   int i;
-  for(i=1;i<argc;i+2){
+  for(i=1;i<argc;i+=2){
     int xval = atoi(argv[i]);
     int yval = atoi(argv[i+1]);
     printf("Xval passed in: %d, Yval passed in: %d",xval,yval);
