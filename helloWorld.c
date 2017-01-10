@@ -4,7 +4,7 @@
 int WIDTH = 24;
 int LENGTH = 80;
 
-void createFlyingStuff(array[WIDTH][LENGTH]){
+void createFlyingStuff(int array[WIDTH][LENGTH]){
     array[2][1]=1;
     array[2][3]=1;
     array[3][4]=1;
@@ -55,7 +55,7 @@ int main(){
 
   init_array(array);
 
-  while(true){
+  while(1){
       print_array(array);
       usleep(83333);
   }
