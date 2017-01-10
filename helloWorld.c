@@ -27,16 +27,12 @@ void createLineRepeatingPattern(int array[WIDTH][LENGTH]){
     array[3][5] = 1;
 }
 
-void createLightweightSpaceShip(int array[WIDTH][LENGTH]){
+void createGlider(int array[WIDTH][LENGTH]){
     array[10][10] = 1;
-    array[9][9]=1;
-    array[9][8]=1;
-    array[9][7]=1;
-    array[10][7]=1;
-    array[11][7]=1;
-    array[12][7]=1;
-    array[13][8]=1;
-    array[13][10]=1;
+    array[11][10] = 1;
+    array[12][10] = 1;
+    array[10][9] = 1;
+    array[11][8] = 1;
 }
 
 void init_array(int array[WIDTH][LENGTH]){
@@ -50,7 +46,7 @@ void init_array(int array[WIDTH][LENGTH]){
     /*In order to debug, manually create stuff, will read from command line later*/
     //createFlyingStuff(array);
     //createLineRepeatingPattern(array);
-    createLightweightSpaceShip(array);
+    createGlider(array);
 }
 
 void print_array(int array[WIDTH][LENGTH]){
