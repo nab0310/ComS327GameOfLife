@@ -4,18 +4,6 @@
 int WIDTH = 24;
 int LENGTH = 80;
 
-void init_array(int array[WIDTH][LENGTH]){
-    int i,j;
-    for(i=0;i<WIDTH;i++){
-        for(j=0;j<LENGTH;j++){
-            /*Initialize everything to zero*/
-            array[i][j] = 0;
-        }
-    }
-    /*In order to debug, manually create stuff, will read from command line later*/
-    createFlyingStuff(array);
-}
-
 void createFlyingStuff(array[WIDTH][LENGTH]){
     array[2][1]=1;
     array[2][3]=1;
@@ -31,6 +19,18 @@ void createFlyingStuff(array[WIDTH][LENGTH]){
     array[14][2]=1;
     array[15][2]=1;
     array[16][2]=1;
+}
+
+void init_array(int array[WIDTH][LENGTH]){
+    int i,j;
+    for(i=0;i<WIDTH;i++){
+        for(j=0;j<LENGTH;j++){
+            /*Initialize everything to zero*/
+            array[i][j] = 0;
+        }
+    }
+    /*In order to debug, manually create stuff, will read from command line later*/
+    createFlyingStuff(array);
 }
 
 void print_array(int array[WIDTH][LENGTH]){
