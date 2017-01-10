@@ -3,17 +3,21 @@ int WIDTH = 24;
 int LENGTH = 80;
 
 void init_array(int array[WIDTH][LENGTH]){
-  for(int i=0;i<LENGTH;i++){
-    for(int j=0;j<WIDTH;j++){
+  int i =0;
+  int j =0;
+  for(i=0;i<LENGTH;i++){
+    for(j=0;j<WIDTH;j++){
       array[i][j] = 1;
     }
   }
 }
 
 void print_array(int array[WIDTH][LENGTH]){
-  for (int i = 0; i < LENGTH; i++) {
-    for(int j = 0; j< WIDTH; j++){
-      if(array[i][j]==1){
+  int k=0;
+  int l=0;
+  for (k = 0; k < LENGTH; k++) {
+    for(l = 0; l< WIDTH; l++){
+      if(array[k][l]==1){
         printf("-");
       }else{
         printf("0");
