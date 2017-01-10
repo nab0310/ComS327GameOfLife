@@ -2,9 +2,7 @@
 int WIDTH = 24;
 int LENGTH = 80;
 
-int array[LENGTH][WIDTH];
-
-void init_array(){
+void init_array(array[WIDTH][LENGTH]){
   int i=0;
   int j=0;
   for(i=0;i<LENGTH;i++){
@@ -14,7 +12,7 @@ void init_array(){
   }
 }
 
-void print_array(){
+void print_array(array[WIDTH][LENGTH]){
   int i=0;
   int j=0;
   for (i = 0; i < LENGTH; i++) {
@@ -28,12 +26,12 @@ void print_array(){
 }
 
 main(){
-
-  init_array();
+  int array[WIDTH][LENGTH];
+  init_array(array);
 
   printf("Hello World!\n");
   printf("Width: %d.\n",WIDTH);
   printf("Length: %d.\n",LENGTH);
 
-  print_array();
+  print_array(array);
 }
