@@ -83,43 +83,59 @@ void life(int array[WIDTH][LENGTH]){
     for(h=0;h<WIDTH;h++){
         for(j=0;j<LENGTH;j++){
             /*Take the value of the neighbors*/
-            int count =0;
-            /*Create temp variables for edge cases*/
-            int tmpH = -1;
-            int tmpJ = -1;
+            int count =-1;
             /*If we do have an edge case we will store the current value
             in a temporary varaiable and do the caluclations with
             the wrapped equivlant*/
             if(h-1<0){
-                tmpH = 0;
-                h = WIDTH-1;
+                count = array[WIDTH-1][j] +
+                array[h+1][j]+
+                array[h][j-1]+
+                array[h][j+1]+
+                array[WIDTH-1][j-1]+
+                array[WIDTH-1][j+1]+
+                array[h+1][j-1]+
+                array[h+1][j+1];
             }
             else if(h+1==WIDTH){
-                tmpH = WIDTH-1;
-                h = 0;
+                count = array[h-1][j] +
+                array[0][j]+
+                array[h][j-1]+
+                array[h][j+1]+
+                array[h-1][j-1]+
+                array[h-1][j+1]+
+                array[0][j-1]+
+                array[0][j+1];
             }
             if(j-1<0){
-		        tmpJ = 0;
-                j = LENGTH-1;
+                count = array[h-1][j] +
+                array[h+1][j]+
+                array[h][LENGTH-1]+
+                array[h][j+1]+
+                array[h-1][LENGTH-1]+
+                array[h-1][j+1]+
+                array[h+1][LENGTH-1]+
+                array[h+1][j+1];
             }
             else if(j+1==LENGTH){
-                tmpJ = LENGTH-1;
-                j=0;
+                count = array[h-1][j] +
+                array[h+1][j]+
+                array[h][j-1]+
+                array[h][0]+
+                array[h-1][j-1]+
+                array[h-1][0]+
+                array[h+1][j-1]+
+                array[h+1][0];
             }
-            count = array[h-1][j] +
-            array[h+1][j]+
-            array[h][j-1]+
-            array[h][j+1]+
-            array[h-1][j-1]+
-            array[h-1][j+1]+
-            array[h+1][j-1]+
-            array[h+1][j+1];
-            /*If we had to change some h or j, change it back!*/
-            if(tmpH != -1){
-                h = tmpH;
-            }
-            if(tmpJ != -1){
-                j = tmpJ;
+            if(count==-1){
+                count = array[h-1][j] +
+                array[h+1][j]+
+                array[h][j-1]+
+                array[h][j+1]+
+                array[h-1][j-1]+
+                array[h-1][j+1]+
+                array[h+1][j-1]+
+                array[h+1][j+1];
             }
             /*Game of life logic*/
             if(tmp[h][j] == 1){
