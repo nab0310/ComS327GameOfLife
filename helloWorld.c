@@ -174,7 +174,7 @@ int main(int argc, char **argv){
 
   init_array(array);
 
-  populateArray(array,argc,**argv);
+  populateArray(array,argc,argv);
 
   while(1){
       print_array(array);
