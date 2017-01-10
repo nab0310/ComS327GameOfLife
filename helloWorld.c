@@ -29,10 +29,10 @@ void createLineRepeatingPattern(int array[WIDTH][LENGTH]){
 
 void createGlider(int array[WIDTH][LENGTH]){
     array[10][10] = 1;
-    array[10][11] = 1;
-    array[10][12] = 1;
-    array[9][10] = 1;
-    array[8][11] = 1;
+    array[11][10] = 1;
+    array[12][10] = 1;
+    array[10][9] = 1;
+    array[11][8] = 1;
 }
 
 void init_array(int array[WIDTH][LENGTH]){
