@@ -5,8 +5,8 @@ int LENGTH = 80;
 void init_array(int array[WIDTH][LENGTH]){
   int i=0;
   int j=0;
-  for(i=0;i<LENGTH;i++){
-    for(j=0;j<WIDTH;j++){
+  for(i=0;i<LENGTH-1;i++){
+    for(j=0;j<WIDTH-1;j++){
       array[i][j] = 1;
     }
   }
@@ -15,8 +15,8 @@ void init_array(int array[WIDTH][LENGTH]){
 void print_array(int array[WIDTH][LENGTH]){
   int i=0;
   int j=0;
-  for (i = 0; i < LENGTH; i++) {
-    for(j = 0; j< WIDTH; j++){
+  for (i = 0; i < LENGTH-1; i++) {
+    for(j = 0; j< WIDTH-1; j++){
       if(array[i][j]==1){
         printf("-");
       }
