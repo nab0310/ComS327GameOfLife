@@ -11,6 +11,17 @@ void init_array(int array[WIDTH][LENGTH]){
     }
 }
 
+void print_array(int array[WIDTH][LENGTH]){
+    int k,l;
+
+    for(k=0;k<WIDTH;k++){
+        for(l=0;l<LENGTH;l++){
+            printf("%d",array[k][l]);
+        }
+        printf("\n");
+    }
+}
+
 int main(){
   int array[WIDTH][LENGTH];
 
@@ -18,12 +29,7 @@ int main(){
 
   init_array(array);
 
-  int k,l;
-
-  for(k=0;k<WIDTH;k++){
-      for(l=0;l<LENGTH;l++){
-          printf("Element [%d][%d]: %d \n",k,l,array[k][l]);
-      }
-  }
+  print_array(array);
+  
   return 0;
 }
