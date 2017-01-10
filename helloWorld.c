@@ -2,7 +2,7 @@
 int WIDTH = 24;
 int LENGTH = 80;
 
-void init_array(array[WIDTH][LENGTH]){
+void init_array(int array[WIDTH][LENGTH]){
   int i=0;
   int j=0;
   for(i=0;i<LENGTH;i++){
@@ -12,7 +12,7 @@ void init_array(array[WIDTH][LENGTH]){
   }
 }
 
-void print_array(array[WIDTH][LENGTH]){
+void print_array(int array[WIDTH][LENGTH]){
   int i=0;
   int j=0;
   for (i = 0; i < LENGTH; i++) {
