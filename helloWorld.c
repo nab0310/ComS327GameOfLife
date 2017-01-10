@@ -9,7 +9,7 @@ void init_array(){
   int j=0;
   for(i=0;i<LENGTH;i++){
     for(j=0;j<WIDTH;j++){
-      array[i][j] = "-";
+      array[i][j] = 1;
     }
   }
 }
@@ -19,7 +19,9 @@ void print_array(){
   int j=0;
   for (i = 0; i < LENGTH; i++) {
     for(j = 0; j< WIDTH; j++){
-      printf("%s",array[i][j]);
+      if(array[i][j]==1){
+        printf("-");
+      }
     }
     printf("\n");
   }
