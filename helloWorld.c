@@ -21,6 +21,12 @@ void createFlyingStuff(int array[WIDTH][LENGTH]){
     array[16][2]=1;
 }
 
+void createLineRepeatingPattern(int array[WIDTH][LENGTH]){
+    array[3][3] = 1;
+    array[3][4] = 1;
+    array[3][5] = 1;
+}
+
 void init_array(int array[WIDTH][LENGTH]){
     int i,j;
     for(i=0;i<WIDTH;i++){
@@ -30,7 +36,8 @@ void init_array(int array[WIDTH][LENGTH]){
         }
     }
     /*In order to debug, manually create stuff, will read from command line later*/
-    createFlyingStuff(array);
+    //createFlyingStuff(array);
+    createLineRepeatingPattern(array);
 }
 
 void print_array(int array[WIDTH][LENGTH]){
