@@ -3,22 +3,20 @@ int WIDTH = 24;
 int LENGTH = 80;
 
 void init_array(int array[WIDTH][LENGTH]){
-  int i=0;
-  int j=0;
-  for(i=0;i<LENGTH-1;i++){
-    for(j=0;j<WIDTH-1;j++){
+  for(int i=0;i<LENGTH;i++){
+    for(int j=0;j<WIDTH;j++){
       array[i][j] = 1;
     }
   }
 }
 
 void print_array(int array[WIDTH][LENGTH]){
-  int i=0;
-  int j=0;
-  for (i = 0; i < LENGTH-1; i++) {
-    for(j = 0; j< WIDTH-1; j++){
+  for (int i = 0; i < LENGTH; i++) {
+    for(int j = 0; j< WIDTH; j++){
       if(array[i][j]==1){
         printf("-");
+      }else{
+        printf("0");
       }
     }
     printf("\n");
