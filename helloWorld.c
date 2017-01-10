@@ -25,6 +25,9 @@ void createLineRepeatingPattern(int array[WIDTH][LENGTH]){
     array[3][3] = 1;
     array[3][4] = 1;
     array[3][5] = 1;
+    array[4][3] = 1;
+    array[5][3] = 1;
+    array[4][4] = 1;
 }
 
 void createGlider(int array[WIDTH][LENGTH]){
@@ -44,8 +47,8 @@ void init_array(int array[WIDTH][LENGTH]){
         }
     }
     /*In order to debug, manually create stuff, will read from command line later*/
-    createFlyingStuff(array);
-    //createLineRepeatingPattern(array);
+    //createFlyingStuff(array);
+    createLineRepeatingPattern(array);
     //createGlider(array);
 }
 
