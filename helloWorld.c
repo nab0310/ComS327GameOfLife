@@ -66,7 +66,8 @@ void life(int array[WIDTH][LENGTH]){
         for(j=0;j<LENGTH;j++){
             /*Take the value of the neighbors*/
             int count =0;
-	    printf("Started loop for x: %d y:%d",h,j);
+	        printf("Started loop for x: %d y:%d",h,j);
+            printf("Added one to x and y: %d %d",h,j);
             /*Create temp variables for edge cases*/
             int tmpH = -1;
             int tmpJ = -1;
@@ -74,22 +75,22 @@ void life(int array[WIDTH][LENGTH]){
             in a temporary varaiable and do the caluclations with
             the wrapped equivlant*/
             if(h-1<0){
-	        printf("We have an x going negative");
+	            printf("We have an x going negative");
                 tmpH = 0;
                 h = WIDTH-1;
             }
-            if(h+1<=WIDTH){
-		printf("We have a x going past postive bounds");
+            if(h+1==WIDTH){
+		        printf("We have a x going past postive bounds");
                 tmpH = WIDTH-1;
                 h = 0;
             }
             if(j-1<0){
                 printf("We have a y going negative");
-		tmpJ = 0;
+		        tmpJ = 0;
                 j = LENGTH-1;
             }
-            if(j+1<=LENGTH){
-		printf("We have a y going past postitive bounds");
+            if(j+1==LENGTH){
+		        printf("We have a y going past postitive bounds");
                 tmpJ = LENGTH-1;
                 j=0;
             }
