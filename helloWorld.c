@@ -114,6 +114,13 @@ void life(int array[WIDTH][LENGTH]){
             array[h-1][j+1]+
             array[h+1][j-1]+
             array[h+1][j+1];
+            /*If we had to change some h or j, change it back!*/
+            if(tmpH != -1){
+                h = tmpH;
+            }
+            if(tmpJ != -1){
+                j = tmpJ;
+            }
             /*Game of life logic*/
             if(tmp[h][j] == 1){
                 if(count == 2 || count == 3){
@@ -128,13 +135,6 @@ void life(int array[WIDTH][LENGTH]){
                 }else{
                     tmp[h][j] = 0;
                 }
-            }
-            /*If we had to change some h or j, change it back!*/
-            if(tmpH != -1){
-                h = tmpH;
-            }
-            if(tmpJ != -1){
-                j = tmpJ;
             }
         }
     }
