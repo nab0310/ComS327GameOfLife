@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 int WIDTH = 24;
 int LENGTH = 80;
@@ -47,7 +48,7 @@ void init_array(int array[WIDTH][LENGTH]){
         }
     }
     /*In order to debug, manually create stuff, will read from command line later*/
-    createFlyingStuff(array);
+    //createFlyingStuff(array);
     //createLineRepeatingPattern(array);
     //createGlider(array);
 }
@@ -157,12 +158,23 @@ void life(int array[WIDTH][LENGTH]){
     copy(tmp, array);
 }
 
-int main(){
+void populateArray(int array[WIDTH][LENGTH],int argc, char **argv){
+  int i;
+  for(i=1;i<argc;i+2){
+    int xval = atoi(argv[i]);
+    int yval = atoi(argv[i+1]);
+    array[xval][yval] = 1;
+  }
+}
+
+int main(int argc, char **argv){
   int array[WIDTH][LENGTH];
 
   printf("Hello World!\n");
 
   init_array(array);
+
+  populateArray(array,argc,**argv);
 
   while(1){
       print_array(array);
