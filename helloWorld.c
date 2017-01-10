@@ -5,15 +5,15 @@ int WIDTH = 24;
 int LENGTH = 80;
 
 void createFlyingStuff(int array[WIDTH][LENGTH]){
-    array[2][1]=1;
-    array[2][3]=1;
-    array[3][4]=1;
-    array[4][4]=1;
-    array[5][1]=1;
-    array[5][4]=1;
-    array[6][2]=1;
-    array[6][3]=1;
-    array[6][4]=1;
+    // array[2][1]=1;
+    // array[2][3]=1;
+    // array[3][4]=1;
+    // array[4][4]=1;
+    // array[5][1]=1;
+    // array[5][4]=1;
+    // array[6][2]=1;
+    // array[6][3]=1;
+    // array[6][4]=1;
     array[15][0]=1;
     array[16][1]=1;
     array[14][2]=1;
@@ -44,9 +44,9 @@ void init_array(int array[WIDTH][LENGTH]){
         }
     }
     /*In order to debug, manually create stuff, will read from command line later*/
-    //createFlyingStuff(array);
+    createFlyingStuff(array);
     //createLineRepeatingPattern(array);
-    createGlider(array);
+    //createGlider(array);
 }
 
 void print_array(int array[WIDTH][LENGTH]){
