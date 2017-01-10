@@ -5,6 +5,7 @@ int LENGTH = 80;
 main(){
 
   printf("Hello World!\n");
-  printf("Width: "+WIDTH + "\n");
-  printf("Length: "+LENGTH +"\n");
+  printf("Width: %d.\n",WIDTH);
+  printf("Length: %d.\n",LENGTH);
+
 }
