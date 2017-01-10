@@ -177,10 +177,14 @@ int main(int argc, char **argv){
 
   populateArray(array,argc,argv);
 
+  int time = 0;
+
   while(1){
       print_array(array);
       life(array);
       usleep(83333);
+      time++;
+      fprintf("Time: %d\n", time);
   }
 
   return 0;
