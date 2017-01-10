@@ -144,8 +144,8 @@ int main(){
   init_array(array);
 
   while(1){
-      life(array);
       print_array(array);
+      life(array);
       usleep(83333);
   }
 
