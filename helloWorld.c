@@ -164,7 +164,7 @@ void populateArray(int array[WIDTH][LENGTH],int argc, char **argv){
     int xval = atoi(argv[i]);
     int yval = atoi(argv[i+1]);
     printf("Xval passed in: %d, Yval passed in: %d",xval,yval);
-    array[xval][yval] = 1;
+    array[yval][xval] = 1;
   }
 }
 
