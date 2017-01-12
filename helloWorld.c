@@ -5,40 +5,6 @@
 int WIDTH = 24;
 int LENGTH = 80;
 
-void createFlyingStuff(int array[WIDTH][LENGTH]){
-    array[2][1]=1;
-    array[2][3]=1;
-    array[3][4]=1;
-    array[4][4]=1;
-    array[5][1]=1;
-    array[5][4]=1;
-    array[6][2]=1;
-    array[6][3]=1;
-    array[6][4]=1;
-    array[15][0]=1;
-    array[16][1]=1;
-    array[14][2]=1;
-    array[15][2]=1;
-    array[16][2]=1;
-}
-
-void createLineRepeatingPattern(int array[WIDTH][LENGTH]){
-    array[3][3] = 1;
-    array[3][4] = 1;
-    array[3][5] = 1;
-    array[4][3] = 1;
-    array[5][3] = 1;
-    array[4][4] = 1;
-}
-
-void createGlider(int array[WIDTH][LENGTH]){
-    array[10][10] = 1;
-    array[11][10] = 1;
-    array[12][10] = 1;
-    array[10][9] = 1;
-    array[11][8] = 1;
-}
-
 void init_array(int array[WIDTH][LENGTH]){
     int i,j;
     for(i=0;i<WIDTH;i++){
@@ -47,10 +13,6 @@ void init_array(int array[WIDTH][LENGTH]){
             array[i][j] = 0;
         }
     }
-    /*In order to debug, manually create stuff, will read from command line later*/
-    //createFlyingStuff(array);
-    //createLineRepeatingPattern(array);
-    //createGlider(array);
 }
 
 void print_array(int array[WIDTH][LENGTH]){
