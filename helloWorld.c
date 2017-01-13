@@ -47,9 +47,8 @@ void life(int array[WIDTH][LENGTH]){
         for(j=0;j<LENGTH;j++){
             /*Take the value of the neighbors*/
             int count =-1;
-            /*If we do have an edge case we will store the current value
-            in a temporary varaiable and do the caluclations with
-            the wrapped equivlant*/
+            /*If we do have an edge case we will create count and change it
+            from -1*/
             if(h-1<0){
                 count = array[WIDTH-1][j] +
                 array[h+1][j]+
